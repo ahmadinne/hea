@@ -1,0 +1,29 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "mv:hearted_apple"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "key": {
+      "o": {
+        "item": "minecraft:nether_wart"
+      },
+      "#": {
+        "item": "minecraft:enchanted_golden_apple"
+      }
+    },
+    "pattern": [
+      "ooo",
+      "o#o",
+      "ooo"
+    ],
+    "result": {
+      "item": "mv:hearted_apple",
+      "count": 1
+    },
+    "priority": 1
+  }
+}
