@@ -1,0 +1,21 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "RP・Heart Enchanted Apple",
+    "description": "Bring new adventure with the Heart Enchanted Apples!",
+    "uuid": "879b9bc6-5a90-4353-86d5-2d799f3385c4",
+    "version": [2, 0, 0],
+    "min_engine_version": [1, 21, 20]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "1b39ef19-88f2-445d-b489-a01ebd464323",
+      "version": [2, 0, 0]
+    }
+  ],
+  "metadata": {
+    "url": "https://mcpedl.com/user/ahmadinne/",
+    "license": "Ahmadinne's"
+  }
+}

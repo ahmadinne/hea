@@ -1,0 +1,71 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.mv": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "walking": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/function mv/alive",
+            "/event entity @s[scores={heart=-10}] heart1",
+            "/event entity @s[scores={heart=-9}] heart1",
+            "/event entity @s[scores={heart=-8}] heart2",
+            "/event entity @s[scores={heart=-7}] heart3",
+            "/event entity @s[scores={heart=-6}] heart4",
+            "/event entity @s[scores={heart=-5}] heart5",
+            "/event entity @s[scores={heart=-4}] heart6",
+            "/event entity @s[scores={heart=-3}] heart7",
+            "/event entity @s[scores={heart=-2}] heart8",
+            "/event entity @s[scores={heart=-1}] heart9",
+            "/event entity @s[scores={heart=0}] heart10",
+            "/event entity @s[scores={heart=1}] heart11",
+            "/event entity @s[scores={heart=2}] heart12",
+            "/event entity @s[scores={heart=3}] heart13",
+            "/event entity @s[scores={heart=4}] heart14",
+            "/event entity @s[scores={heart=5}] heart15",
+            "/event entity @s[scores={heart=6}] heart16",
+            "/event entity @s[scores={heart=7}] heart17",
+            "/event entity @s[scores={heart=8}] heart18",
+            "/event entity @s[scores={heart=9}] heart19",
+            "/event entity @s[scores={heart=10}] heart20"
+          ]
+        },
+        "walking": {
+          "transitions": [
+            {
+              "default": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/function mv/alive",
+            "/event entity @s[scores={heart=-10}] heart1",
+            "/event entity @s[scores={heart=-9}] heart1",
+            "/event entity @s[scores={heart=-8}] heart2",
+            "/event entity @s[scores={heart=-7}] heart3",
+            "/event entity @s[scores={heart=-6}] heart4",
+            "/event entity @s[scores={heart=-5}] heart5",
+            "/event entity @s[scores={heart=-4}] heart6",
+            "/event entity @s[scores={heart=-3}] heart7",
+            "/event entity @s[scores={heart=-2}] heart8",
+            "/event entity @s[scores={heart=-1}] heart9",
+            "/event entity @s[scores={heart=0}] heart10",
+            "/event entity @s[scores={heart=1}] heart11",
+            "/event entity @s[scores={heart=2}] heart12",
+            "/event entity @s[scores={heart=3}] heart13",
+            "/event entity @s[scores={heart=4}] heart14",
+            "/event entity @s[scores={heart=5}] heart15",
+            "/event entity @s[scores={heart=6}] heart16",
+            "/event entity @s[scores={heart=7}] heart17",
+            "/event entity @s[scores={heart=8}] heart18",
+            "/event entity @s[scores={heart=9}] heart19",
+            "/event entity @s[scores={heart=10}] heart20"
+          ]
+        }
+      }
+    }
+  }
+}
