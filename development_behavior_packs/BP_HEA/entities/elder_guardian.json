@@ -1,13 +1,16 @@
 {
-  "format_version": "1.13.0",
+  "format_version": "1.21.70",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:elder_guardian",
+      "spawn_category": "monster",
       "is_spawnable": true,
       "is_summonable": true,
       "is_experimental": false
     },
     "components": {
+      "minecraft:is_hidden_when_invisible": {
+      },
       "minecraft:experience_reward": {
         "on_death": "query.last_hit_by_player ? 10 : 0"
       },
@@ -15,7 +18,8 @@
         "width": 1.99,
         "height": 1.99
       },
-      "minecraft:nameable": {},
+      "minecraft:nameable": {
+      },
       "minecraft:loot": {
         "table": "loot_tables/entities/eguard.json"
       },
@@ -26,8 +30,10 @@
         "can_walk": false,
         "can_breach": true
       },
-      "minecraft:movement.sway": {},
-      "minecraft:jump.static": {},
+      "minecraft:movement.sway": {
+      },
+      "minecraft:jump.static": {
+      },
       "minecraft:health": {
         "value": 80,
         "max": 80
@@ -35,12 +41,7 @@
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
           {
-            "filters": {
-              "test": "in_lava",
-              "subject": "self",
-              "operator": "==",
-              "value": true
-            },
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
             "cause": "lava",
             "damage_per_tick": 4
           }
@@ -62,23 +63,20 @@
       "minecraft:breathable": {
         "breathes_water": true
       },
+      "minecraft:home": {
+        "restriction_type": "random_movement",
+        "restriction_radius": 16
+      },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 1,
         "entity_types": [
           {
             "filters": {
-              "any_of": [
-                {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "player"
-                },
-                {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "squid"
-                }
-              ]
+                "any_of": [
+                  { "test" :  "is_family", "subject" : "other", "value" :  "player"},
+                  { "test" :  "is_family", "subject" : "other", "value" :  "squid"},
+                  { "test" :  "is_family", "subject" : "other", "value" :  "axolotl"}
+                ]
             },
             "max_dist": 16
           }
@@ -89,17 +87,14 @@
       "minecraft:behavior.guardian_attack": {
         "priority": 4
       },
-      "minecraft:behavior.move_towards_restriction": {
+      "minecraft:behavior.move_towards_home_restriction": {
         "priority": 5,
-        "speed_multiplier": 1.0,
-        "control_flags": [
-          "move",
-          "look"
-        ]
+        "speed_multiplier": 1.0
       },
-      "minecraft:behavior.random_stroll": {
+      "minecraft:behavior.random_swim": {
         "priority": 7,
-        "speed_multiplier": 0.5
+        "speed_multiplier": 0.5,
+        "avoid_surface": false
       },
       "minecraft:behavior.look_at_player": {
         "priority": 8,
@@ -110,16 +105,15 @@
         "priority": 9
       },
       "minecraft:type_family": {
-        "family": [
-          "guardian_elder",
-          "monster",
-          "mob"
-        ]
+        "family": [ "aquatic", "guardian_elder", "monster", "mob" ]
       },
-      "minecraft:physics": {},
+	    "minecraft:physics": {
+      },
       "minecraft:pushable": {
         "is_pushable": true,
         "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
       }
     }
   }
