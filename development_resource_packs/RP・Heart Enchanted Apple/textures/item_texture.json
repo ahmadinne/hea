@@ -1,9 +1,0 @@
-{
-  "resource_pack_name": "vanilla",
-  "texture_name": "atlas.items",
-  "texture_data": {
-    "mv:hearted_apple": {
-      "textures": "textures/items/hearted_apple"
-    }
-  }
-}
